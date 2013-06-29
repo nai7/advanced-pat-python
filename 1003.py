@@ -47,8 +47,7 @@ def shtPath(cur,curLen,curHelp):
                 vst[d] = False
                 curLen -= mmap[cur][d]
                 curHelp -= nHelp[d]
-            
-    
+
 vst[cur] = True
 curLen = 0
 curHelp = nHelp[cur]

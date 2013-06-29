@@ -1,10 +1,9 @@
 while True:
-    str = raw_input()
-    str = str.split()
-    num = int(str[0])
+    str = map(int, raw_input().split())
+    num = str[0]
     if num < 0:
         break
-    redix = int(str[1])
+    redix = str[1]
 
     tmp = num
     numr = 0
