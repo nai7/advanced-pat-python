@@ -19,7 +19,7 @@ for cus in sorted(customs):
     if len(windows) < K:
         wait_until = START_TIME
     else:
-        wait_until = sorted(windows).pop(0)
+        wait_until = min(windows)
         windows.remove(wait_until)
     waittime += wait_until - cus[0] if cus[0] < wait_until else 0
     windows.append(max(wait_until, cus[0]) + cus[1])
