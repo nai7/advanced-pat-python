@@ -18,7 +18,7 @@ ranklist.sort(mcmp)
 
 ranks = [0] * (N+1)
 eqcnt = [0] * (N+1)
-lasts = [0] * (N+1)
+lasts = [-1] * (N+1)
 for entry in ranklist:
     score = entry[1]
     for loc in 0, entry[-1]:
@@ -28,4 +28,4 @@ for entry in ranklist:
             ranks[loc] += 1 + eqcnt[loc]
             eqcnt[loc] = 0
             lasts[loc] = score
-    print entry[0], ranks[0], entry[-1], ranks[entry[-1]]
+    print entry[0], ranks[0], loc, ranks[loc]
