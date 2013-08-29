@@ -1,0 +1,1 @@
+print int(''.join(sorted(raw_input().split()[1:], lambda s1, s2: cmp(s1+s2, s2+s1))))
